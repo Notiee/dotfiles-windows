@@ -1,0 +1,107 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+# General settings
+final_space: true
+version: 2
+
+# Theme palette
+palette:
+  black: "#282c34"
+  red: "#e06c75"
+  green: "#98c379"
+  yellow: "#e5c07b"
+  blue: "#61afef"
+  magenta: "#c678dd"
+  cyan: "#56b6c2"
+  white: "#dcdfe4"
+  foreground: "#dcdfe4"
+  background: "#282c34"
+
+
+# Terminal title
+console_title_template: "{{if .Root}} [Admin] {{end}} {{.PWD}}"
+
+# Prompt styling
+blocks:
+  # Main lefside status
+  - type: prompt
+    newline: true
+    alignment: left
+    segments:
+
+      - type: session
+        style: "plain"
+        foreground: p:foreground
+        template: "{{ .UserName }} "
+
+      - type: path
+        style: plain
+        foreground: p:cyan
+        properties:
+          style: folder
+        template: "{{ .Path }} "
+
+      - type: git
+        style: plain
+        properties:
+          fetch_status: true
+          fetch_stash_count: true
+          fetch_worktree_count: true
+          branch_icon: ""
+        templates:
+          - "<p:yellow>git</>:"
+          - "{{ if or (.Working.Changed) (.Staging.Changed) (gt .StashCount 0) }}<p:magenta>{{ .HEAD }}</>{{ else }}<p:green>{{ .HEAD }}</>{{ end }}{{ if (gt .Ahead 0)}}<p:cyan>{{ .BranchStatus }}</>{{ end }}{{ if (gt .Behind 0)}}<p:cyan>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <p:green>{{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }} <p:red>{{ .Working.String }}</>{{ end }}"
+
+  # Main rightside information
+  - type: prompt
+    alignment: right
+    segments:
+
+      - type: path
+        style: plain
+        foreground: p:cyan
+        properties:
+          folder_separator_icon: /
+          folder_icon: ..
+          style: unique
+        template: "<p:yellow>[</>{{ .Path }}<p:yellow>]</>"
+
+      - type: time
+        style: plain
+        foreground: p:foreground
+        properties:
+          time_format: "15:04:05"
+        template: "<p:yellow>[</>{{ .CurrentDate | date .Format }}<p:yellow>]</>"
+
+
+  # User Input newline
+  - type: prompt
+    newline: true
+    alignment: left
+    segments:
+
+      - type: text
+        style: plain
+        template: ">"
+
+
+  # Righside Input prompt
+  - type: rprompt
+    alignment: right
+    segments:
+
+      - type: exit
+        style: plain
+        foreground: p:red
+        properties:
+          always_enabled: false
+        template: "<p:yellow>[</>{{ if gt .Code 0 }}{{ .Meaning }}{{ else }}<p:blue>\uf42e</>{{ end }}<p:yellow>]</>"
+
+      - type: executiontime
+        style: plain
+        foreground: p:blue
+        properties:
+          always_enabled: true
+          threshold: 500
+          style: austin
+        template: "<p:yellow>[</>{{ .FormattedMs }}<p:yellow>]</>"
