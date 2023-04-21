@@ -13,10 +13,10 @@ return {
       -- Styling
       window = {
         completion = {
-          border = 'rounded',
+          border = 'single',
         },
         documentation = {
-          border = 'rounded',
+          border = 'single',
         }
       },
       -- Snippets

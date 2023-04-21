@@ -1,4 +1,4 @@
--- Greeter/Dashboard
+-- Greeter/Dashboard TODO: Fix keybindings shown on dashboard
 return {
   'goolord/alpha-nvim',
   -- requires = { 'nvim-tree/nvim-web-devicons' },
