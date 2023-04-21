@@ -1,7 +1,8 @@
 -- File explorer
 return {
   'nvim-tree/nvim-tree.lua',
-  
+  opts = {},
+  --[[  
   config = function()
     local api = require('nvim-tree.Api')
     vim.keymap.set('n', '<leader>tt', api.tree.toggle, { desc = "[T]ree [T]oggle" })
@@ -11,4 +12,5 @@ return {
 
     require("nvim-tree").setup()
   end
+  --]]
 }

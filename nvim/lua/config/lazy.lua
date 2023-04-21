@@ -16,7 +16,6 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Declare plugins to load, either directly in this table or from the plugins folder
 local plugins = {
-  
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
@@ -27,8 +26,11 @@ local plugins = {
   -- Add nim language support
   'alaviss/nim.nvim',
 
+  -- Icons for UI elements (git icons, file explorer icons, autocomplete type icons etc.)
+  {'nvim-tree/nvim-web-devicons'},
+
   -- Import plugins from lua/plugins/*<plugin>.lua, to modularize plugins  
-  { import = 'plugins' }, 
+  { import = 'plugins' },
 
 }
 

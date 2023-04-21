@@ -1,8 +1,5 @@
 -- Contains UI plugins in one file
 return {
-  -- Icons for UI elements (git icons, file explorer icons, autocomplete type icons etc.)
-  -- {'nvim-tree/nvim-web-devicons'},
-
   -- Lualine, replace default status line with a customizable one written in Lua
   {
     'nvim-lualine/lualine.nvim',
