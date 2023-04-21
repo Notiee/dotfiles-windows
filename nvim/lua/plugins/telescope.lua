@@ -5,6 +5,7 @@ return {
     dependencies = {
         'nvim-lua/plenary.nvim',
     },
+    --[[
     keys = {
         {'<leader>f', desc = 'Fuzzy [f]inder'},
         {'<leader>ff', '<cmd>Telescope find_files<cr>', desc = 'Search [f]iles'},
@@ -12,22 +13,28 @@ return {
         {'<leader>fg', '<cmd>Telescope live_grep<cr>', desc = 'Search by [g]rep'},
         {'<leader>fh', '<cmd>Telescope help_tags<cr>', desc = 'Search [h]elp'},
     },
+    --]]
     config = function()
-        local telescope = require('telescope')
         -- Make border square instead of default 'rounded'
+        local telescope = require('telescope')
         telescope.setup({
             -- DIRTY, overwriting defaults, TODO: make theme for square borders
             defaults = {
                 borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" }
             }
         })
-        -- OLD BINDINGS
-        --[[
-        local builtin = require('telescope.builtin')
-        vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
-        vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
-        vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
-        vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
-        --]]
+        -- Keybindings
+        require("which-key").register({
+        ['<leader>'] = {
+            f = {
+                    name = 'Fuzzy [f]inder',
+                    f = {'<cmd>Telescope find_files<cr>', 'Find [f]iles'},
+                    w = {'<cmd>Telescope grep_string<cr>', 'Search [w]ord under cursor'},
+                    g = {'<cmd>Telescope live_grep<cr>', 'Search [g]rep'},
+                    h = {'<cmd>Telescope help_tags<cr>', 'Search [h]elp'},
+                    r = {'<cmd>Telescope oldfiles<cr>', '[r]ecent files'},
+                }
+            }
+        })
     end
 }
