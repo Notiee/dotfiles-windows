@@ -14,6 +14,7 @@ vim.opt.tabstop = 2 -- Set tab indent width
 vim.opt.shiftwidth = 2 -- Set spaces indent width
 vim.opt.expandtab = true -- Use spaces for <Tab> indentation
 vim.opt.shiftround = true -- Round indentation for consistency
+vim.opt.smarttab = true
 
 -- Colors
 vim.opt.termguicolors = true -- Enable 24-bit color required for some plugins
