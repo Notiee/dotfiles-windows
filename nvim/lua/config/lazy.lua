@@ -41,7 +41,7 @@ local plugins = {
 local opts = {
   install = { colorscheme = { 'catppuccin' } },
   ui = {
-    border = 'single',
+    --border = 'single',
   }
 }
 
