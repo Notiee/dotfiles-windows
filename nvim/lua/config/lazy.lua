@@ -23,6 +23,9 @@ local plugins = {
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
+  -- Sane buffer deletes
+  'famiu/bufdelete.nvim',
+
   -- Add nim language support
   'alaviss/nim.nvim',
 

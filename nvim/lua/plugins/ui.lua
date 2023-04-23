@@ -24,12 +24,16 @@ return {
     'akinsho/bufferline.nvim', version = "*",
     opts = {
       options = {
+        -- Use bufdelete.nvim instead of native function, needed with nvimtree
+        close_command = "Bdelete! %d",
+        right_mouse_command = "Bdelete! %d",
+        left_mouse_command = "buffer %d",
         diagnostics = "nvim_lsp",
-        --Only show bufferline when multiple tabs
-        always_show_bufferline = false,
+        always_show_bufferline = true,
         indicator = { style = "icon", icon = "▎" },
         offsets = {
-          -- {filetype = "NvimTree", text = "File Explorer", text_align = "center", separator = true},
+          -- {filetype = "NvimTree", text = "File Explorer", text_align = "center", highligh = "Directory", separator = true},
+          {filetype = "NvimTree"}
         }
       },
     }
