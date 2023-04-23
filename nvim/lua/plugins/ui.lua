@@ -19,6 +19,21 @@ return {
       }
     end
   },
+  -- Tabbar (bufferline)
+  {
+    'akinsho/bufferline.nvim', version = "*",
+    opts = {
+      options = {
+        diagnostics = "nvim_lsp",
+        --Only show bufferline when multiple tabs
+        always_show_bufferline = false,
+        indicator = { style = "icon", icon = "▎" },
+        offsets = {
+          --{filetype = "NvimTree", text = "File Explorer", text_align = "center", separator = true},
+        }
+      },
+    }
+  },
   -- Lualine, replace default status line with a customizable one written in Lua
   {
     'nvim-lualine/lualine.nvim',
