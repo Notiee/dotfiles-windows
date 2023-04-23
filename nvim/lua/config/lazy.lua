@@ -20,7 +20,7 @@ local plugins = {
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
 
-   -- Detect tabstop and shiftwidth automatically
+  -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
   -- Add nim language support
@@ -36,7 +36,10 @@ local plugins = {
 
 -- Options to configure lazy itself
 local opts = {
-
+  install = { colorscheme = { 'catppuccin' } },
+  ui = {
+    border = 'single',
+  }
 }
 
 -- Load and setup lazy
