@@ -4,6 +4,8 @@ return {
   { "rcarriga/nvim-notify", opts = {}},
   -- Shows colors behind RGB and HEX values etc..
   { "NvChad/nvim-colorizer.lua", opts = {}},
+  -- Highlight TODO, FIX etc..
+  { "folke/todo-comments.nvim", dependencies = "nvim-lua/plenary.nvim", opts = {} },
   -- Indent guides
   {
     "lukas-reineke/indent-blankline.nvim",
@@ -64,7 +66,7 @@ return {
       |   |  |   |   | |    | |     |      |     | |    | |   |   |  |   |
       +---+--+.  |   +-+----+ |     +------+     | +----+-+   |  .+--+---+
       `.  |    `.|    \|     \|     |      |     |/     |/    |.'    | .'
-        ` +------+     +------+     +------+     +------+     +------+'     
+        ` +------+     +------+     +------+     +------+     +------+'
       ]]
       dashboard.section.header.val = vim.split(logo, '\n')
       return dashboard
