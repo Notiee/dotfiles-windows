@@ -1,7 +1,6 @@
 -- File explorer
 return {
     'nvim-tree/nvim-tree.lua',
-    opts = {}, 
     config = function()
         -- Keybindings
         require("which-key").register({
