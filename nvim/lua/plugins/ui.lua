@@ -29,7 +29,7 @@ return {
         always_show_bufferline = false,
         indicator = { style = "icon", icon = "▎" },
         offsets = {
-          --{filetype = "NvimTree", text = "File Explorer", text_align = "center", separator = true},
+          -- {filetype = "NvimTree", text = "File Explorer", text_align = "center", separator = true},
         }
       },
     }
