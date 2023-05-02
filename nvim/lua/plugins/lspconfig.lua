@@ -69,6 +69,7 @@ return {
         clangd = {},
         rust_analyzer = {},
         nimls = {},
+        zls = {},
         -- gopls = {},
         -- pyright = {},
         -- tsserver = {},
