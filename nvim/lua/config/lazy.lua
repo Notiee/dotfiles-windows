@@ -37,9 +37,10 @@ local plugins = {
 
 }
 
+
 -- Options to configure lazy itself
 local opts = {
-  install = { colorscheme = { 'catppuccin' } },
+  install = { colorscheme = { 'gruvsquirrel' } },
   ui = {
     --border = 'single',
   }
@@ -48,5 +49,5 @@ local opts = {
 -- Load and setup lazy
 require("lazy").setup(plugins, opts)
 
-
-
+-- Set theme
+vim.cmd.colorscheme [[gruvsquirrel]]
