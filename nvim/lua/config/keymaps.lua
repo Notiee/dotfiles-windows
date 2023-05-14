@@ -1,3 +1,7 @@
+-- Switch between buffers
+vim.keymap.set('n', '<C-PageUp>', ':bnext<CR>', {silent = true})
+vim.keymap.set('n', '<C-PageDown>', ':bprevious<CR>', {silent = true})
+
 -- Neovide GUI client
 if vim.g.neovide == true then
     -- vim.cmd 'set guifont=Hack\ NF:h10'
