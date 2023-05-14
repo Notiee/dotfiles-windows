@@ -59,16 +59,15 @@ return {
     -- We modify theme (dashboard) to our liking aswell as making buttons adhere to my nvim config
     opts = function()
       local dashboard = require('alpha.themes.dashboard')
-      local logo = [[
-      +------+.      +------+       +------+       +------+      .+------+
-      |`.    | `.    |\     |\      |      |      /|     /|    .' |    .'|
-      |  `+--+---+   | +----+-+     +------+     +-+----+ |   +---+--+'  |
-      |   |  |   |   | |    | |     |      |     | |    | |   |   |  |   |
-      +---+--+.  |   +-+----+ |     +------+     | +----+-+   |  .+--+---+
-      `.  |    `.|    \|     \|     |      |     |/     |/    |.'    | .'
-        ` +------+     +------+     +------+     +------+     +------+'
-      ]]
-      dashboard.section.header.val = vim.split(logo, '\n')
+        dashboard.section.buttons.val = {
+          dashboard.button("e", " " .. " New file", ":ene <CR>"),
+          dashboard.button("f", " " .. " Find file", ":Telescope find_files <CR>"),
+          dashboard.button("r", " " .. " Recent files", ":Telescope oldfiles <CR>"),
+          dashboard.button("g", " " .. " Find text", ":Telescope live_grep <CR>"),
+          dashboard.button("c", " " .. " Config", ":e $MYVIMRC <CR>"),
+          -- dashboard.button("s", " " .. " Restore Session", [[:lua require("persistence").load() <cr>]]),
+          dashboard.button("q", " " .. " Quit", ":qa<CR>"),
+        }
       return dashboard
     end,
     -- Initialize alpha with the theme of choice (dashboard)
