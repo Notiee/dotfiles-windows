@@ -2,6 +2,7 @@
 -- Put in bindings for plugins here!
 return {
     "folke/which-key.nvim",
+    lazy = true,
     config = function()
         vim.o.timeout = true
         vim.o.timeoutlen = 300
