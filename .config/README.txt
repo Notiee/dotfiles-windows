@@ -1,0 +1,1 @@
+Folders and files in here should be symlinked into ~/.config
