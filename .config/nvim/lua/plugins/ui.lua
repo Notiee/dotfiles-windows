@@ -13,10 +13,10 @@ return {
       require("indent_blankline").setup {
         --char = "▏",
         --context_char = "▏",
-        no_tab_character = true,
+        -- no_tab_character = true,
         show_current_context = true,
         show_end_of_line = true,
-        --show_trailing_blankline_indent = true,
+        space_char_blankline = " ", 
         use_treesitter = true,
       }
     end

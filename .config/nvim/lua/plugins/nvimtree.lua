@@ -1,22 +1,22 @@
 -- File explorer
 return {
-    'nvim-tree/nvim-tree.lua',
-    keys = {
-        { "<C-n>", ":NvimTreeToggle<cr>", desc = "Toggle File Tree" }, 
-    },
-    config = function()
-        -- Keybindings
-        -- require("which-key").register({
-        -- ['<leader>'] = {
-        --     e = {
-        --         name = 'File [e]xplorer',
-        --         t = {'<cmd>NvimTreeToggle<cr>', '[t]oggle file explorer'},
-        --         o = {'<cmd>NvimTreeOpen<cr>', '[o]pen file explorer'},
-        --         c = {'<cmd>NvimTreeClose<cr>', '[c]lose file explorer'},
-        --         f = {'<cmd>NvimTreeFocus<cr>', '[f]ocus file explorer'},
-        --     }
-        --     }
-        -- })
-        require("nvim-tree").setup()
-    end
+  'nvim-tree/nvim-tree.lua',
+  keys = {
+    { "<C-n>", ":NvimTreeToggle<cr>", desc = "Toggle File Tree" },
+  },
+  config = function()
+    -- Keybindings
+    -- require("which-key").register({
+    -- ['<leader>'] = {
+    --     e = {
+    --         name = 'File [e]xplorer',
+    --         t = {'<cmd>NvimTreeToggle<cr>', '[t]oggle file explorer'},
+    --         o = {'<cmd>NvimTreeOpen<cr>', '[o]pen file explorer'},
+    --         c = {'<cmd>NvimTreeClose<cr>', '[c]lose file explorer'},
+    --         f = {'<cmd>NvimTreeFocus<cr>', '[f]ocus file explorer'},
+    --     }
+    --     }
+    -- })
+    require("nvim-tree").setup()
+  end
 }
