@@ -27,7 +27,7 @@ return {
         require("which-key").register({
         ['<leader>'] = {
             f = {
-                    name = 'Fuzzy [f]inder',
+                    name = '[F]uzzy finder',
                     f = {'<cmd>Telescope find_files<cr>', 'Find [f]iles'},
                     w = {'<cmd>Telescope grep_string<cr>', 'Search [w]ord under cursor'},
                     g = {'<cmd>Telescope live_grep<cr>', 'Search [g]rep'},
