@@ -20,7 +20,7 @@ vim.opt.smarttab = true
 vim.opt.termguicolors = true -- Enable 24-bit color required for some plugins
 
 -- Whitespace characters
-vim.opt.list = true -- Show tabs and spaces
+-- vim.opt.list = true -- Show tabs and spaces
 vim.opt.listchars:append "space:·"
 vim.opt.listchars:append "eol:↴"
 
