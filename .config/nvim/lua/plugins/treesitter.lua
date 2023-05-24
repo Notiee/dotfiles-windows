@@ -16,10 +16,10 @@ return {
       -- Languages to install
 
       ensure_installed = {
-        'lua', 'c', 'cpp', 'c_sharp', 'rust', 'python', 'bash', 'markdown', 'markdown_inline',
-        'vim', 'vimdoc', 'javascript', 'typescript', 'tsx', 'json', 'html', 'css',
-        'java', 'glsl', 'hlsl', 'ini', 'php', 'sql', 'toml', 'yaml',
-        'gdscript', 'zig', 'go', 'wgsl', 'wgsl_bevy',
+        'lua', 'c', 'cpp', 'c_sharp', 'rust', 'python', 'bash', 'markdown',
+        'vim', 'vimdoc', 'javascript', 'typescript', 'json', 'html', 'css',
+        'java', 'ini', 'php', 'sql', 'toml', 'yaml',
+        'gdscript', 'zig', 'go', 'wgsl','glsl', 'hlsl',
       },
       -- ensure_installed = "all", -- install all language parsers
       ignore_install = {},      -- Exclude installing these parsers
