@@ -1,7 +1,7 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
+    "actions":
     [
         {
             "command": "paste",
@@ -12,7 +12,7 @@
             "keys": "ctrl+shift+f"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "copy",
                 "singleLine": false
@@ -20,7 +20,7 @@
             "keys": "ctrl+c"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "splitPane",
                 "split": "auto",
@@ -33,14 +33,15 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{60c476a5-474c-4ec8-8389-68835bc09ee5}",
-    "profiles": 
+    "initialCols": 100,
+    "profiles":
     {
-        "defaults": 
+        "defaults":
         {
             "experimental.retroTerminalEffect": false,
-            "useAtlasEngine": false
+            "useAtlasEngine": true
         },
-        "list": 
+        "list":
         [
             {
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
@@ -64,11 +65,11 @@
                 "antialiasingMode": "grayscale",
                 "closeOnExit": "graceful",
                 "colorScheme": "Tango Dark",
-                "commandline": "cmd.exe /s /k %CLINK_DIR%/clink_x64.exe  inject",
-                "font": 
+                "commandline": "cmd.exe /s /k clink inject",
+                "font":
                 {
-                    "face": "CaskaydiaCove Nerd Font Mono",
-                    "size": 10.0
+                    "face": "DejaVuSansMono NFM",
+                    "size": 12.0
                 },
                 "guid": "{60c476a5-474c-4ec8-8389-68835bc09ee5}",
                 "hidden": false,
@@ -85,10 +86,10 @@
             {
                 "colorScheme": "One Half Dark",
                 "commandline": "pwsh.exe",
-                "font": 
+                "font":
                 {
-                    "face": "BigBlueTermPlus Nerd Font Mono",
-                    "size": 9.0
+                    "face": "Hack NFM",
+                    "size": 12.0
                 },
                 "guid": "{533f56f5-ea72-4a5f-ab97-8d1601ff4518}",
                 "hidden": false,
@@ -107,9 +108,9 @@
                 "startingDirectory": "%USERPROFILE%"
             },
             {
-                "font": 
+                "font":
                 {
-                    "face": "UbuntuMono Nerd Font",
+                    "face": "UbuntuMono NFM",
                     "size": 16.0
                 },
                 "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
@@ -120,7 +121,7 @@
             {
                 "commandline": "bash.exe -c fish -cur_console:p",
                 "experimental.retroTerminalEffect": false,
-                "font": 
+                "font":
                 {
                     "face": "CaskaydiaCove NF Mono",
                     "size": 11.0
@@ -140,7 +141,7 @@
             }
         ]
     },
-    "schemes": 
+    "schemes":
     [
         {
             "background": "#0C0C0C",
