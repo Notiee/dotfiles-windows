@@ -1,7 +1,7 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
+    "actions":
     [
         {
             "command": "paste",
@@ -12,21 +12,21 @@
             "keys": "ctrl+shift+f"
         },
         {
-            "command": 
+            "command":
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+c"
+        },
+        {
+            "command":
             {
                 "action": "splitPane",
                 "split": "auto",
                 "splitMode": "duplicate"
             },
             "keys": "alt+shift+d"
-        },
-        {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+c"
         }
     ],
     "alwaysShowTabs": true,
@@ -34,24 +34,16 @@
     "copyOnSelect": false,
     "defaultProfile": "{60c476a5-474c-4ec8-8389-68835bc09ee5}",
     "initialCols": 100,
-    "initialRows": 34,
-    "newTabMenu": 
-    [
-        {
-            "type": "remainingProfiles"
-        }
-    ],
-    "profiles": 
+    "profiles":
     {
-        "defaults": 
+        "defaults":
         {
             "experimental.retroTerminalEffect": false,
             "useAtlasEngine": true
         },
-        "list": 
+        "list":
         [
             {
-                "colorScheme": "Vintage",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Command Prompt"
@@ -74,7 +66,7 @@
                 "closeOnExit": "graceful",
                 "colorScheme": "Tango Dark",
                 "commandline": "cmd.exe /s /k clink inject",
-                "font": 
+                "font":
                 {
                     "face": "DejaVuSansMono NFM",
                     "size": 12.0
@@ -92,11 +84,11 @@
                 "useAcrylic": true
             },
             {
-                "colorScheme": "Campbell Powershell",
+                "colorScheme": "One Half Dark",
                 "commandline": "pwsh.exe",
-                "font": 
+                "font":
                 {
-                    "face": "CamingoCode",
+                    "face": "Hack NFM",
                     "size": 12.0
                 },
                 "guid": "{533f56f5-ea72-4a5f-ab97-8d1601ff4518}",
@@ -109,7 +101,6 @@
                 "useAcrylic": true
             },
             {
-                "colorScheme": "Tango Dark",
                 "commandline": "\"%PROGRAMFILES%\\Git\\usr\\bin\\bash.exe\" -i -l",
                 "guid": "{d15b228a-05d7-50d1-8472-f60aaba86efc}",
                 "icon": "%PROGRAMFILES%\\Git\\mingw64\\share\\git\\git-for-windows.ico",
@@ -117,7 +108,7 @@
                 "startingDirectory": "%USERPROFILE%"
             },
             {
-                "font": 
+                "font":
                 {
                     "face": "UbuntuMono NFM",
                     "size": 16.0
@@ -130,7 +121,7 @@
             {
                 "commandline": "bash.exe -c fish -cur_console:p",
                 "experimental.retroTerminalEffect": false,
-                "font": 
+                "font":
                 {
                     "face": "CaskaydiaCove NF Mono",
                     "size": 11.0
@@ -147,74 +138,10 @@
                 "hidden": true,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
-            },
-            {
-                "guid": "{16208362-94fc-5b1f-a491-5b2624d5ab56}",
-                "hidden": true,
-                "name": "Visual Studio Debug Console",
-                "source": "VSDebugConsole"
-            },
-            {
-                "guid": "{554bda25-d4c1-548c-aaae-7bdb383bba22}",
-                "hidden": false,
-                "name": "Developer Command Prompt for VS 2022",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{05ae67dd-e047-5bc3-a7dd-2d93d2df4772}",
-                "hidden": false,
-                "name": "Developer PowerShell for VS 2022",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "altGrAliasing": true,
-                "antialiasingMode": "grayscale",
-                "closeOnExit": "graceful",
-                "colorScheme": "Tango Dark",
-                "commandline": "cmd.exe /k \"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\VsDevCmd.bat\" -startdir=none && clink inject",
-                "font": 
-                {
-                    "face": "DejaVuSansMono NFM",
-                    "size": 12.0
-                },
-                "guid": "{fb61d8a9-c8e2-4028-b668-3023f1236c15}",
-                "hidden": false,
-                "historySize": 9001,
-                "icon": "C:\\Users\\Nota\\Programs\\clink\\bin\\clink_orange.ico",
-                "name": "Clink VS2022 Dev Prompt (x86)",
-                "opacity": 30,
-                "padding": "5",
-                "scrollbarState": "hidden",
-                "snapOnInput": true,
-                "startingDirectory": "%USERPROFILE%",
-                "useAcrylic": true
-            },
-            {
-                "altGrAliasing": true,
-                "antialiasingMode": "grayscale",
-                "closeOnExit": "graceful",
-                "colorScheme": "Tango Dark",
-                "commandline": "cmd.exe /k \"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\VsDevCmd.bat\" -startdir=none -arch=x64 -host_arch=x64 && clink inject",
-                "font": 
-                {
-                    "face": "DejaVuSansMono NFM",
-                    "size": 12.0
-                },
-                "guid": "{32d948ed-5a6a-4bde-bbab-761b06297bf8}",
-                "hidden": false,
-                "historySize": 9001,
-                "icon": "C:\\Users\\Nota\\Programs\\clink\\bin\\clink_purple.ico",
-                "name": "Clink VS2022 Dev Prompt (x64)",
-                "opacity": 30,
-                "padding": "5",
-                "scrollbarState": "hidden",
-                "snapOnInput": true,
-                "startingDirectory": "%USERPROFILE%",
-                "useAcrylic": true
             }
         ]
     },
-    "schemes": 
+    "schemes":
     [
         {
             "background": "#0C0C0C",
