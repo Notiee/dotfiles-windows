@@ -86,6 +86,7 @@
                 "name": "Clink",
                 "opacity": 30,
                 "padding": "5",
+                "scrollbarState": "hidden",
                 "snapOnInput": true,
                 "startingDirectory": "%USERPROFILE%",
                 "useAcrylic": true
@@ -183,6 +184,7 @@
                 "name": "Clink VS2022 Dev Prompt (x86)",
                 "opacity": 30,
                 "padding": "5",
+                "scrollbarState": "hidden",
                 "snapOnInput": true,
                 "startingDirectory": "%USERPROFILE%",
                 "useAcrylic": true
@@ -205,7 +207,7 @@
                 "name": "Clink VS2022 Dev Prompt (x64)",
                 "opacity": 30,
                 "padding": "5",
-                "scrollbarState": "visible",
+                "scrollbarState": "hidden",
                 "snapOnInput": true,
                 "startingDirectory": "%USERPROFILE%",
                 "useAcrylic": true
